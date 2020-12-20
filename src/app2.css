@@ -1,0 +1,26 @@
+#app2 {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid red;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  flex-basis: 50%;
+  width: 100%;
+}
+ul li {
+  flex-basis: 50%;
+  text-align: center;
+  border: 1px solid blue;
+}
+ul li.active {
+  background: rgb(153, 119, 216);
+  color: wheat;
+}
+.content > div {
+  display: none;
+}
+.content > div.active {
+  display: block;
+}

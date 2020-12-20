@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#app1 {
+  border: 1px solid red;
+  width: 50vw;
+  height: 50vh;
+}
+#app1 button {
+  margin: 10px 0px 0 10px;
+  padding: 10px;
+}
+#app1 span {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+#app2 {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid red;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  flex-basis: 50%;
+  width: 100%;
+}
+ul li {
+  flex-basis: 50%;
+  text-align: center;
+  border: 1px solid blue;
+}
+ul li.active {
+  background: rgb(153, 119, 216);
+  color: wheat;
+}
+.content > div {
+  display: none;
+}
+.content > div.active {
+  display: block;
+}
+
+#app3 {
+  border: 1px solid blue;
+  width: 50vw;
+  height: 50vh;
+}
+#app3 .square {
+  width: 8vw;
+  height: 8vw;
+  margin: 50px 0 0 50px;
+  border: 1px solid grey;
+  transition: all 0.5s;
+}
+#app3 .circular {
+  transform: translateX(20vw);
+  border-radius: 50%;
+}
+
+#app4 {
+  border: 1px solid yellow;
+  width: 50vw;
+  height: 50vh;
+}
+#app4 .circle {
+  width: 15vw;
+  height: 15vw;
+  margin: 5vw;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+#app4 .circle.active {
+  animation: change 1s infinite alternate linear;
+}
+@keyframes change {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+
+/*# sourceMappingURL=main.63be3159.css.map */

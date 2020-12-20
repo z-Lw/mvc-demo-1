@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+::after {
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
