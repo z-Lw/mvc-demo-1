@@ -1,17 +1,24 @@
 import $ from 'jquery'
-const $squ=$('.square')
-if(parseInt(localStorage.getItem('i')))$squ.addClass('circular')
-let index 
-$squ.on('click',()=>{
+import './app3.css'
+const $square=$('#app3 .square')
+const localKey = 'app3-active'
+const active = localStorage.getItem(localKey) === 'yes'
+// if(active){
+//     $square.addClass('active')
+// }else{
+//     $square.removeClass('active')
+// }
+
+$square.toggleClass('active',active)
+$square.on('click',()=>{
     
-    if($squ.hasClass('circular'))
+    if($square.hasClass('active'))
     {
-        $squ.removeClass('circular')
-        index=0
+        $square.removeClass('active')
+        localStorage.setItem(localKey,'no')
     }else{
-        $squ.addClass('circular')
-        index=1
+        $square.addClass('active')
+        localStorage.setItem(localKey,'yes')
     }
-    localStorage.setItem('i',index)
-   // $squ.toggleClass('circular')
+   
 })

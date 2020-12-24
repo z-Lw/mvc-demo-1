@@ -1,26 +1,23 @@
 #app2 {
-  width: 50vw;
-  height: 50vh;
-  border: 1px solid red;
 }
-ul {
+#app2 .tab-bar {
   display: flex;
-  justify-content: center;
-  flex-basis: 50%;
-  width: 100%;
 }
-ul li {
-  flex-basis: 50%;
-  text-align: center;
-  border: 1px solid blue;
+
+#app2 .tab-bar > li {
+  border: 1px solid grey;
+  width: 50%;
+  cursor: pointer;
 }
-ul li.active {
-  background: rgb(153, 119, 216);
-  color: wheat;
+#app2 .tab-bar > li.selected {
+  background-color: rgb(238, 74, 224);
+  color: white;
 }
-.content > div {
+#app2 .tab-content {
+}
+#app2 .tab-content > li {
   display: none;
 }
-.content > div.active {
+#app2 .tab-content > li.active {
   display: block;
 }

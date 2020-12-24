@@ -1,5 +1,6 @@
 import $ from 'jquery'
-const $circle = $('.circle')
+import './app4.css'
+const $circle = $('#app4 .circle')
 $circle.on('mouseenter',()=>{
     
     $circle.addClass('active')

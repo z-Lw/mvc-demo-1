@@ -1,14 +1,26 @@
 import $ from 'jquery'
-const $ul = $('ul')
-const $li = $('li')
-const index=parseInt(localStorage.getItem('index'))
-$li.eq(index).addClass('active')
-$('.content').children().eq(index).addClass('active')
-$ul.on('click','li',(e)=>{
-    
-    const index=$li.index(e.currentTarget)
-    $li.eq(index).addClass('active').siblings().removeClass('active')
-    $('.content').children().eq(index).addClass('active')
-    .siblings().removeClass('active')
-    localStorage.setItem('index',index)
+import './app2.css'
+
+const $tabBar = $('#app2 .tab-bar')
+const $tabContent = $('#app2 .tab-content')
+const localKey = 'app2-index';
+const index = localStorage.getItem(localKey)||0;
+
+$tabBar.on('click','li',e=>{
+    const $li = $(e.currentTarget)
+    const index = $li.index()
+    localStorage.setItem(localKey,index)
+    $li
+    .addClass('selected')
+    .siblings()
+    .removeClass('selected')
+    $tabContent
+    .children()
+    .eq(index)
+    .addClass('active')
+    .siblings()
+    .removeClass('active')
 })
+$tabBar.children().eq(index).trigger('click')
+
+

@@ -4,13 +4,13 @@
   height: 50vh;
 }
 #app3 .square {
-  width: 8vw;
-  height: 8vw;
-  margin: 50px 0 0 50px;
+  width: 10vw;
+  height: 10vw;
+  margin: 10vw 0 0 10vw;
   border: 1px solid grey;
   transition: all 0.5s;
 }
-#app3 .circular {
+#app3 .square.active {
   transform: translateX(20vw);
   border-radius: 50%;
 }
